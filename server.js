@@ -15,6 +15,32 @@ app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
+const getToken = (url, callback) => {
+
+  const options = {
+    url: process.env.GET_TOKEN,
+    json: true,
+    body:{
+      client_id: process.env.CLIENT_ID,
+      client_secret: process.env.CLIENT_SECRET,
+      grant_type: 'client_credentials'
+    }
+  }
+  request.post(options, (err, res, body) => {
+    if (err) {
+      return console.log(err)
+    }
+    console.log(`Status: ${res.statusCode}`);
+    console.log(body);
+
+    callback(res)
+  })
+}
+
+getToken(process.env.GET_TOKEN, (res) => {
+  console.log(res);
+})
+
 app.get("/", (res) => res.status(200).send("yoooo it works"));
 app.use('/api')
 app.get('*', (res) => 
