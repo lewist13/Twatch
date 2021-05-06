@@ -1,0 +1,17 @@
+{
+  "name": "Twatch",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/lewist13/Twatch.git",
+  "author": "lewist13 <lewistpro@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^9.0.0",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "morgan": "^1.10.0"
+  }
+}
