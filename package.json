@@ -5,6 +5,11 @@
   "repository": "https://github.com/lewist13/Twatch.git",
   "author": "lewist13 <lewistpro@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
   "dependencies": {
     "bcrypt": "^5.0.1",
     "body-parser": "^1.19.0",
